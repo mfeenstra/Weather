@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zipcode: 95660
+  address: 123 Watt Ave
+  city: Sacramento
+  state: CA
+  country: USA
+  temp: 80.0
+  feelslike: 85.0
+  tempmin: 60.0
+  tempmax: 90.0
+  humidity: 75.0
+
+two:
+  zipcode: WC2N 5DU
+  address: 123 Main St
+  city: London
+  state: NA
+  country: UK
+  temp: 80.0
+  feelslike: 85.0
+  tempmin: 60.0
+  tempmax: 90.0
+  humidity: 75.0

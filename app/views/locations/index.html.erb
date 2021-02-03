@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+<style>
+  table {
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th {
+    background-color: #4287f5;
+    color: black;
+  }
+  td {
+    text-align: center;
+    border: 1px solid black;
+    color: darkred;
+  }
+  tr td:last-child {
+    white-space: nowrap;
+  }
+  h1 {
+    color: darkblue;
+    text-align: center;
+  }
+  h2 {
+    color: #4287f5;
+  }
+</style>
+  
+  
+<h1>Forecast Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zipcode</th>
+      <th>Street Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Temp</th>
+      <th>Feels Like</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Humidity</th>
+      <th>Created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.zipcode %></td>
+        <td><%= location.address %></td>
+        <td><%= location.city %></td>
+        <td><%= location.state %></td>
+        <td><%= location.country %></td>
+        <td><%= location.temp %></td>
+        <td><%= location.feelslike %></td>
+        <td><%= location.tempmin %></td>
+        <td><%= location.tempmax %></td>
+        <td><%= location.humidity %></td>
+	<td><%= location.age %></td>
+        <td><%= link_to 'Show', location %></td>
+        <td><%= link_to 'Edit', edit_location_path(location) %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div style="text-align: center">
+  <%= link_to 'Create New', new_location_path %> |
+  <%= link_to 'Back', :back %>
+</div>

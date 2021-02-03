@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p><strong>ZipCode:</strong>
+  <%= @location.zipcode %></p>
+
+<p><strong>Street Address:</strong>
+  <%= @location.address %></p>
+
+<p><strong>City:</strong>
+  <%= @location.city %></p>
+
+<p><strong>State:</strong>
+  <%= @location.state %></p>
+
+<p><strong>Country:</strong>
+  <%= @location.country %></p>
+
+<p><strong>Temp:</strong>
+  <%= @location.temp %></p>
+
+<p><strong>Feels Like:</strong>
+  <%= @location.feelslike %></p>
+
+<p><strong>Minimum Temp:</strong>
+  <%= @location.tempmin %></p>
+
+<p><strong>Maximum Temp:</strong>
+  <%= @location.tempmax %></p>
+
+<p><strong>Humidity:</strong>
+  <%= @location.humidity %></p>
+
+<%= link_to 'Create New', new_location_path %> |
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Display All', locations_path %> |
+<%= link_to 'Back', :back %>
